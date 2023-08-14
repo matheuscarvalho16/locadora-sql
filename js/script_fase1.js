@@ -100,3 +100,7 @@ fecharDialogoFal.addEventListener('click', () => {
 function recomecar() {
     window.location.reload();
 }
+
+function proximaF2() {
+    window.location = "../html/fase2.html";
+}

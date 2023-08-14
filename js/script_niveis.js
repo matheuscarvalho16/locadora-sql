@@ -16,6 +16,5 @@ function nivel4() {
 
 function reiniciarJogo() {
     console.log("reiniciar");
-    localStorage.removeItem("nivel2Ativo");
     window.location = "../index.html";
 }
