@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Níveis SQL</title>
+    <link rel="stylesheet" href="/css/style_niveis.css">
+
+    <script>
+        /* ver se o botão está ativado */
+        window.onload = function () {
+        // Obtém o estado do botão "nivel2" do armazenamento local
+            const nivel2Ativo = localStorage.getItem('nivel2Ativo');
+
+        // Se o botão "nivel2" estiver ativado, habilita-o
+            if (nivel2Ativo === 'true') {
+                console.log("foi");
+                const btnNivel2 = document.getElementById('nivel2');
+                if (btnNivel2) {
+                    btnNivel2.removeAttribute('disabled');
+            }
+        }
+    };
+    </script>
+
+</head>
+<body>
+    <div class="container">
+        <p>NÍVEL</p>
+        <div class="niveis">
+            <button onclick="nivel1()">1</button>
+            <button id="nivel2" disabled>2</button>
+            <button disabled>3</button>
+            <button disabled>4</button>
+        </div>
+        <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
+    </div>
+
+    <script src="/js/script_niveis.js"></script>
+</body>
+</html>

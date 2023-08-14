@@ -1,0 +1,176 @@
+:root {
+    --corclara: #D9D9D9;
+    --azulescuro: #0F0826;
+    --roxo: #4F2C8D;
+    --azulclaro: #B2B8F2;
+    --verde: #248133;
+    --verdedesativo: #24813387;
+    --vermelho: #C21F19;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    overflow: hidden;
+    background-image: url(../img/vingadoresfundo.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: repeat;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto {
+    margin: 10px;
+    height: 20vh;
+    width: auto;
+    background-color: var(--corclara);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.historia {
+    padding: 10px;
+    margin: 0 10px;
+    background-color: var(--azulescuro);
+    border-radius: 5px;
+    font-size: larger;
+    color: #FFF;
+}
+
+.jogo {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+}
+
+.pecas {
+    margin: 10px;
+    padding-top: 10px;
+    height: auto;
+    width: 20%;
+    background-color: var(--corclara);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+.bloco {
+    margin: 10px 10px 0 10px;
+    padding: 15px;
+    background-color: var(--roxo);
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+
+.dragging {
+    opacity: 0.5;
+}
+
+.area {
+    margin: 10px;
+    height: auto;
+    width: 80%;
+    background-color: var(--corclara);
+    border-radius: 10px;
+}
+
+.btn-nivel {
+    background-color: var(--vermelho);
+    border: none;
+    font-weight: bolder;
+    font-size: 15px;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 10px;
+    cursor: pointer;
+    color: var(--corclara);
+}
+
+.bloco_area {
+    margin: 20px;
+    height: 50vh;
+    width: auto;
+    background-color: var(--azulclaro);
+    border-radius: 10px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    padding-top: 3px;
+}
+
+#executar {
+    background-color: var(--verde);
+    border: none;
+    color: #FFF;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#executar:disabled {
+    background-color: var(--verdedesativo);
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin-left: 20px;
+    cursor: no-drop;
+}
+
+.hover {
+    background-color: var(--azulescuro);
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    width: 30rem;
+    padding: 1rem;
+}
+
+dialog .headerDia #fecharDialogoSucesso, #fecharDialogoFalha {
+    width: 2rem;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: .2rem;
+    cursor: pointer;
+}
+
+dialog .headerDia {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #000;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+dialog .footerDia {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+    margin-top: 1rem;
+    padding-top: 1rem;
+}
+
+.btn-nivel:nth-child(2) {
+    background-color: green;
+}
+
+button:hover {
+    box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
