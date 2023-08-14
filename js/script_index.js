@@ -1,3 +1,3 @@
 function niveis() {
-    window.location = "../html/niveis.html";
+    window.location = "./html/niveis.html";
 }
