@@ -98,3 +98,10 @@ fecharDialogoFal.addEventListener('click', () => {
 function recomecar() {
     window.location.reload();
 }
+
+function adici(event) {
+    const elemn = event.target;
+    console.log("FUNFA");
+    areaSoltar.appendChild(elemn);
+    botao.removeAttribute("disabled");
+}

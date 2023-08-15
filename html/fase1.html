@@ -17,13 +17,13 @@
         </div>
         <div class="jogo"> 
             <div class="pecas"> 
-                <div class="bloco" id="create" draggable="true">
+                <div class="bloco" id="create" draggable="true" onclick="adici(event)">
                     CREATE TABLE Filmes (titulo, genero);
                 </div>
-                <div class="bloco" id="select" draggable="true">
+                <div class="bloco" id="select" draggable="true" onclick="adici(event)">
                     SELECT genero = aventura FROM Filmes;
                 </div>
-                <div class="bloco" id="insert" draggable="true">
+                <div class="bloco" id="insert" draggable="true" onclick="adici(event)">
                     INSERT INTO Filmes VALUES ('Pantera Negra', ação);
                 </div>
             </div>

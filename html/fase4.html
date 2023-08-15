@@ -12,16 +12,16 @@
         <div class="texto">
             <img src="../img/homemdeferro.png" alt="homem_de_ferro">
             <div class="historia">
-                <p>Tony Stark, o Homem de Ferro, está expandindo sua locadora de filmes. Agora ele quer facilitar a busca dos clientes. Sua missão é criar um sistema de busca que retorne apenas filmes do gênero 'Aventura'. Utilize o comando SQL 'SELECT' para realizar essa consulta e exiba os resultados.</p>
+                <p>A estante da locadora do Homem de Ferro está cheia de filmes épicos de super-heróis, mas agora é hora de focar nos filmes do próprio Homem de Ferro. Sua missão é selecionar todos os filmes da estante que têm o Homem de Ferro como título. Utilize o comando SQL 'SELECT' com 'WHERE' para filtrar os filmes.</p>
             </div>
         </div>
         <div class="jogo"> 
-            <div class="pecas"> 
-                <div class="bloco" id="create" draggable="true" onclick="adici(event)">
-                    CREATE TABLE Filmes (titulo, genero);
-                </div>
+            <div class="pecas">
                 <div class="bloco" id="select" draggable="true" onclick="adici(event)">
                     SELECT genero = aventura FROM Filmes;
+                </div>
+                <div class="bloco" id="selectW" draggable="true" onclick="adici(event)">
+                    SELECT * FROM Filmes WHERE titulo LIKE '%Homem de Ferro%';
                 </div>
                 <div class="bloco" id="insert" draggable="true" onclick="adici(event)">
                     INSERT INTO Filmes VALUES ('Pantera Negra', ação);
@@ -30,7 +30,7 @@
             <div class="area">
                 <div class="bloco_area">
                 </div>
-                <button onclick="nivel2()" id="executar" disabled>EXECUTAR</button>
+                <button onclick="nivel4()" id="executar" disabled>EXECUTAR</button>
             </div>
         </div>
         <div class="footer">
@@ -43,34 +43,33 @@
             <h2>Parabéns! Nível concluido</h2>
             <button id="fecharDialogoSucesso"><i class="fa-solid fa-x"></i></button>
         </div>
-        <p>Parabéns, herói! Você dominou a arte da busca seletiva. Ao usar o comando SQL 'SELECT', você trouxe à luz todos os filmes de aventura da estante. Assim como os heróis da tela grande, você agora pode localizar informações específicas em um piscar de olhos. Continue aprimorando suas habilidades e prepare-se para a próxima aventura!</p>
+        <p>Parabéns, herói! Você dominou a arte do comando SQL 'SELECT' com 'WHERE', selecionando com precisão todos os filmes do Homem de Ferro na estante. Assim como o Homem de Ferro enfrenta desafios, você também conquistou essa missão de SQL. Continue aprimorando suas habilidades e prepare-se para novas aventuras no mundo dos bancos de dados!</p>
         <table>
             <tr>
                 <th>ID</th>
-                <th>Nome</th>
+                <th>Título</th>
                 <th>Gênero</th>
             </tr>
             <tr>
                 <td>1</td>
                 <td>Homem de Ferro</td>
-                <td>Aventura</td>
+                <td>Ação</td>
             </tr>
             <tr>
                 <td>2</td>
-                <td>Pantera Negra</td>
-                <td>Aventura</td>
+                <td>Homem de Ferro 2</td>
+                <td>Ação</td>
             </tr>
             <tr>
                 <td>3</td>
-                <td>Mulher-Maravilha</td>
-                <td>Aventura</td>
+                <td>Homem de Ferro 3</td>
+                <td>Ação</td>
             </tr>
-            <!-- Adicione mais linhas para representar outros filmes -->
         </table>
         
         <div class="footerDia">
             <button onclick="niveis()" class="btn-nivel">NÍVEIS</button>
-            <button onclick="proximaF3()" class="btn-nivel">PRÓXIMA FASE</button>
+            <!-- <button onclick="proximaF3()" class="btn-nivel">PRÓXIMA FASE</button> -->
         </div>
     </dialog>
 
@@ -79,12 +78,12 @@
             <h2>Não foi dessa vez!</h2>
             <button id="fecharDialogoFalha"><i class="fa-solid fa-x"></i></button>
         </div>
-        <p>Infelizmente, a busca não trouxe o tesouro que você procurava. Assim como no mundo do SQL, onde a sintaxe precisa ser precisa, aqui também é fundamental acertar o comando. Reveja sua consulta e lembre-se de que cada detalhe importa.</p>
+        <p>Ops, algo deu errado! Parece que a seleção de filmes do Homem de Ferro não foi realizada corretamente. Lembre-se, o comando SQL 'SELECT' com 'WHERE' permite filtrar os resultados com base em condições específicas. Tente novamente, ajuste suas condições e mostre que você pode se tornar um verdadeiro mestre em SQL!</p>
         <div class="footerDia">
             <button onclick="recomecar()" class="btn-nivel">TENTAR NOVAMENTE</button>
         </div>
     </dialog>
 
-    <script src="../js/script_fase2.js"></script>
+    <script src="../js/script_fase4.js"></script>
 </body>
 </html>

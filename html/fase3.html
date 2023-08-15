@@ -12,7 +12,7 @@
         <div class="texto">
             <img src="../img/homemdeferro.png" alt="homem_de_ferro">
             <div class="historia">
-                <p>Tony Stark, o Homem de Ferro, está expandindo sua locadora de filmes. Agora ele quer facilitar a busca dos clientes. Sua missão é criar um sistema de busca que retorne apenas filmes do gênero 'Aventura'. Utilize o comando SQL 'SELECT' para realizar essa consulta e exiba os resultados.</p>
+                <p>A locadora do Homem de Ferro está crescendo e novos filmes estão chegando. Sua missão é atualizar a estante de filmes para incluir um novo lançamento. Utilize o comando SQL 'INSERT INTO' para adicionar o filme 'Pantera Negra' à estante.</p>
             </div>
         </div>
         <div class="jogo"> 
@@ -30,7 +30,7 @@
             <div class="area">
                 <div class="bloco_area">
                 </div>
-                <button onclick="nivel2()" id="executar" disabled>EXECUTAR</button>
+                <button onclick="nivel3()" id="executar" disabled>EXECUTAR</button>
             </div>
         </div>
         <div class="footer">
@@ -43,29 +43,22 @@
             <h2>Parabéns! Nível concluido</h2>
             <button id="fecharDialogoSucesso"><i class="fa-solid fa-x"></i></button>
         </div>
-        <p>Parabéns, herói! Você dominou a arte da busca seletiva. Ao usar o comando SQL 'SELECT', você trouxe à luz todos os filmes de aventura da estante. Assim como os heróis da tela grande, você agora pode localizar informações específicas em um piscar de olhos. Continue aprimorando suas habilidades e prepare-se para a próxima aventura!</p>
+        <p>Parabéns, herói! Você adicionou com sucesso o filme 'Pantera Negra' à estante, utilizando o comando SQL 'INSERT INTO'. Assim como um verdadeiro super-herói, você está ampliando sua base de dados e enriquecendo a coleção da locadora. Veja o resultado na tabela abaixo:</p>
         <table>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Gênero</th>
-            </tr>
-            <tr>
-                <td>1</td>
-                <td>Homem de Ferro</td>
-                <td>Aventura</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Pantera Negra</td>
-                <td>Aventura</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Mulher-Maravilha</td>
-                <td>Aventura</td>
-            </tr>
-            <!-- Adicione mais linhas para representar outros filmes -->
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>titulo</th>
+                    <th>genero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Pantera Negra</td>
+                    <td>Aventura</td>
+                </tr>
+            </tbody>
         </table>
         
         <div class="footerDia">
@@ -79,12 +72,12 @@
             <h2>Não foi dessa vez!</h2>
             <button id="fecharDialogoFalha"><i class="fa-solid fa-x"></i></button>
         </div>
-        <p>Infelizmente, a busca não trouxe o tesouro que você procurava. Assim como no mundo do SQL, onde a sintaxe precisa ser precisa, aqui também é fundamental acertar o comando. Reveja sua consulta e lembre-se de que cada detalhe importa.</p>
+        <p>Ops, parece que algo não se encaixou perfeitamente. Mas não desista, herói! Tente novamente e lembre-se de utilizar o comando SQL 'INSERT INTO' para adicionar o filme 'Pantera Negra' à estante. Lembre-se, até mesmo o Homem de Ferro enfrentou desafios. Sua próxima tentativa pode ser o ponto de virada para o sucesso!</p>
         <div class="footerDia">
             <button onclick="recomecar()" class="btn-nivel">TENTAR NOVAMENTE</button>
         </div>
     </dialog>
 
-    <script src="../js/script_fase2.js"></script>
+    <script src="../js/script_fase3.js"></script>
 </body>
 </html>

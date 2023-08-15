@@ -12,6 +12,7 @@
         // Obtém o estado do botão "nivel2" do armazenamento local
             const nivel2Ativo = localStorage.getItem('nivel2Ativo');
             const nivel3Ativo = localStorage.getItem('nivel3Ativo');
+            const nivel4Ativo = localStorage.getItem('nivel4Ativo');
 
         // Se o botão "nivel2" estiver ativado, habilita-o
             if (nivel2Ativo === 'true') {
@@ -27,6 +28,12 @@
                     btnNivel3.removeAttribute('disabled');
                 }
             }
+            if (nivel4Ativo === 'true') {
+                const btnNivel4 = document.getElementById('nivel4');
+                if (btnNivel4) {
+                    btnNivel4.removeAttribute('disabled');
+                }
+            }
     };
     </script>
 
@@ -38,7 +45,7 @@
             <button onclick="nivel1()">1</button>
             <button id="nivel2" onclick="nivel2()" disabled>2</button>
             <button id="nivel3" onclick="nivel3()" disabled>3</button>
-            <button id="nivel4" disabled>4</button>
+            <button id="nivel4" onclick="nivel4()" disabled>4</button>
         </div>
         <button onclick="reiniciarJogo()">Reiniciar Jogo</button>
     </div>
