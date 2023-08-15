@@ -12,19 +12,19 @@
         <div class="texto">
             <img src="../img/homemdeferro.png" alt="homem_de_ferro">
             <div class="historia">
-                <p>A estante da locadora do Homem de Ferro está cheia de filmes épicos de super-heróis, mas agora é hora de focar nos filmes do próprio Homem de Ferro. Sua missão é selecionar todos os filmes da estante que têm o Homem de Ferro como título. Utilize o comando SQL 'SELECT' com 'WHERE' para filtrar os filmes.</p>
+                <p>A estante da locadora do Homem de Ferro está cheia de filmes épicos de super-heróis, mas agora é hora de focar nos filmes do próprio Homem de Ferro. Sua missão é selecionar todos os filmes da estante que têm o Homem de Ferro como título.</p>
             </div>
         </div>
         <div class="jogo"> 
             <div class="pecas">
                 <div class="bloco" id="select" draggable="true" onclick="adici(event)">
-                    SELECT genero = aventura FROM Filmes;
+                    SELECT * FROM Filmes;
                 </div>
                 <div class="bloco" id="selectW" draggable="true" onclick="adici(event)">
                     SELECT * FROM Filmes WHERE titulo LIKE '%Homem de Ferro%';
                 </div>
                 <div class="bloco" id="insert" draggable="true" onclick="adici(event)">
-                    INSERT INTO Filmes VALUES ('Pantera Negra', ação);
+                    SELECT * FROM Filmes WHERE titulo = 'Homem de Ferro';
                 </div>
             </div>
             <div class="area">

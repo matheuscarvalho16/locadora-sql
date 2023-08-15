@@ -12,16 +12,16 @@
         <div class="texto">
             <img src="../img/homemdeferro.png" alt="homem_de_ferro">
             <div class="historia">
-                <p>A locadora do Homem de Ferro está crescendo e novos filmes estão chegando. Sua missão é atualizar a estante de filmes para incluir um novo lançamento. Utilize o comando SQL 'INSERT INTO' para adicionar o filme 'Pantera Negra' à estante.</p>
+                <p>A locadora do Homem de Ferro está crescendo e novos filmes estão chegando. Sua missão é atualizar a estante de filmes para incluir um novo lançamento, Pantera Negra. </p>
             </div>
         </div>
         <div class="jogo"> 
             <div class="pecas"> 
                 <div class="bloco" id="create" draggable="true" onclick="adici(event)">
-                    CREATE TABLE Filmes (titulo, genero);
+                    INSERT INTO Filmes VALUES ('Pantera Negra');
                 </div>
                 <div class="bloco" id="select" draggable="true" onclick="adici(event)">
-                    SELECT genero = aventura FROM Filmes;
+                    CREATE TABLE Filmes ('Pantera Negra');
                 </div>
                 <div class="bloco" id="insert" draggable="true" onclick="adici(event)">
                     INSERT INTO Filmes VALUES ('Pantera Negra', ação);
