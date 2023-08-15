@@ -12,19 +12,19 @@
         <div class="texto">
             <img src="../img/homemdeferro.png" alt="homem_de_ferro">
             <div class="historia">
-                <p>A estante da locadora do Homem de Ferro está cheia de filmes épicos de super-heróis, mas agora é hora de focar nos filmes do próprio Homem de Ferro. Sua missão é selecionar todos os filmes da estante que têm o Homem de Ferro como título.</p>
+                <p>A locadora do Homem de Ferro está em expansão, mas espaço é essencial. Sua missão é otimizar a estante de filmes exibindo os filmes em ordem alfabética.</p>
             </div>
         </div>
         <div class="jogo"> 
             <div class="pecas">
                 <div class="bloco" id="select" draggable="true" onclick="adici(event)">
-                    SELECT * FROM Filmes;
-                </div>
-                <div class="bloco" id="selectW" draggable="true" onclick="adici(event)">
-                    SELECT * FROM Filmes WHERE titulo LIKE '%Homem de Ferro%';
+                    SELECT * FROM Filmes ORDER BY;
                 </div>
                 <div class="bloco" id="insert" draggable="true" onclick="adici(event)">
-                    SELECT * FROM Filmes WHERE titulo = 'Homem de Ferro';
+                    SELECT titulo FROM Filmes WHERE genero = 'Aventura' ORDER BY titulo;
+                </div>
+                <div class="bloco" id="selectW" draggable="true" onclick="adici(event)">
+                    SELECT * FROM Filmes ORDER BY titulo;
                 </div>
             </div>
             <div class="area">
@@ -43,7 +43,7 @@
             <h2>Parabéns! Nível concluido</h2>
             <button id="fecharDialogoSucesso"><i class="fa-solid fa-x"></i></button>
         </div>
-        <p>Parabéns, herói! Você dominou a arte do comando SQL 'SELECT' com 'WHERE', selecionando com precisão todos os filmes do Homem de Ferro na estante. Assim como o Homem de Ferro enfrenta desafios, você também conquistou essa missão de SQL. Continue aprimorando suas habilidades e prepare-se para novas aventuras no mundo dos bancos de dados!</p>
+        <p>Parabéns! Você usou o comando SELECT com a cláusula ORDER BY com maestria. Os filmes foram listados em ordem alfabética, tornando a estante mais organizada. Assim como o Homem de Ferro é um mestre em estratégias, você também demonstrou habilidades na manipulação de dados. Continue avançando e explorando os segredos do SQL!</p>
         <table>
             <tr>
                 <th>ID</th>
@@ -52,18 +52,28 @@
             </tr>
             <tr>
                 <td>1</td>
+                <td>Homem Aranha: Longe de Casa</td>
+                <td>Ação/Aventura</td>
+            </tr>
+            <tr>
+                <td>2</td>
                 <td>Homem de Ferro</td>
                 <td>Ação</td>
             </tr>
             <tr>
-                <td>2</td>
-                <td>Homem de Ferro 2</td>
+                <td>3</td>
+                <td>Mulher-Maravilha</td>
                 <td>Ação</td>
             </tr>
             <tr>
-                <td>3</td>
-                <td>Homem de Ferro 3</td>
+                <td>4</td>
+                <td>Pantera Negra</td>
                 <td>Ação</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Thor: Ragnarok</td>
+                <td>Aventura</td>
             </tr>
         </table>
         
@@ -78,7 +88,7 @@
             <h2>Não foi dessa vez!</h2>
             <button id="fecharDialogoFalha"><i class="fa-solid fa-x"></i></button>
         </div>
-        <p>Ops, algo deu errado! Parece que a seleção de filmes do Homem de Ferro não foi realizada corretamente. Lembre-se, o comando SQL 'SELECT' com 'WHERE' permite filtrar os resultados com base em condições específicas. Tente novamente, ajuste suas condições e mostre que você pode se tornar um verdadeiro mestre em SQL!</p>
+        <p>Ops, algo não deu certo. Lembre-se de que a cláusula ORDER BY exige precisão. Não desanime, herói! Continue aprimorando suas habilidades e tente novamente. Grandes desafios também foram enfrentados pelo Homem de Ferro em suas jornadas!</p>
         <div class="footerDia">
             <button onclick="recomecar()" class="btn-nivel">TENTAR NOVAMENTE</button>
         </div>
