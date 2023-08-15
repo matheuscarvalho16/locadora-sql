@@ -144,6 +144,7 @@ dialog {
 
 dialog .headerDia #fecharDialogoSucesso, #fecharDialogoFalha {
     width: 2rem;
+    max-width: 90%;
     background-color: red;
     color: white;
     border: none;
@@ -173,4 +174,75 @@ dialog .footerDia {
 
 button:hover {
     box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 5px;
+}
+
+table th, td {
+    border: 2px solid #ccc;
+    padding: 2px;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .historia {
+        font-size: medium;
+    }
+
+    .jogo {
+        height: auto;
+        width: auto;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pecas {
+        height: 100%;
+        padding-bottom: 10px;
+        width: auto;
+    }
+
+    .area {
+        margin: 10px;
+        width: auto;
+        padding-bottom: 10px;
+    }
+
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .jogo {
+        height: 20%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .historia {
+        font-size: small;
+    }
+
+    .pecas {
+        height: 100%;
+        padding-bottom: 10px;
+        width: auto;
+    }
+
+    .area {
+        margin: 10px;
+        width: auto;
+        padding-bottom: 10px;
+    }
+
 }

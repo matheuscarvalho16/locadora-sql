@@ -18,13 +18,13 @@
         <div class="jogo"> 
             <div class="pecas"> 
                 <div class="bloco" id="create" draggable="true">
-                    CREATE TABLE Filmes
+                    CREATE TABLE Filmes (titulo, genero);
                 </div>
                 <div class="bloco" id="select" draggable="true">
-                    SELECT * FROM Filmes
+                    SELECT genero = aventura FROM Filmes;
                 </div>
                 <div class="bloco" id="insert" draggable="true">
-                    INSERT INTO Filmes VALUES ('Homem de Ferro')
+                    INSERT INTO Filmes VALUES ('Pantera Negra', ação);
                 </div>
             </div>
             <div class="area">

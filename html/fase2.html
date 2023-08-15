@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fase 2 - SQL</title>
+    <link rel="stylesheet" href="../css/style_fase1.css">
+    <script src="https://kit.fontawesome.com/d8ed91d4b7.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    Fase 2
+    <div class="container">
+        <div class="texto">
+            <img src="../img/homemdeferro.png" alt="homem_de_ferro">
+            <div class="historia">
+                <p>Tony Stark, o Homem de Ferro, está expandindo sua locadora de filmes. Agora ele quer facilitar a busca dos clientes. Sua missão é criar um sistema de busca que retorne apenas filmes do gênero 'Aventura'. Utilize o comando SQL 'SELECT' para realizar essa consulta e exiba os resultados.</p>
+            </div>
+        </div>
+        <div class="jogo"> 
+            <div class="pecas"> 
+                <div class="bloco" id="create" draggable="true">
+                    CREATE TABLE Filmes (titulo, genero);
+                </div>
+                <div class="bloco" id="select" draggable="true">
+                    SELECT genero = aventura FROM Filmes;
+                </div>
+                <div class="bloco" id="insert" draggable="true">
+                    INSERT INTO Filmes VALUES ('Pantera Negra', ação);
+                </div>
+            </div>
+            <div class="area">
+                <div class="bloco_area">
+                </div>
+                <button onclick="nivel2()" id="executar" disabled>EXECUTAR</button>
+            </div>
+        </div>
+        <div class="footer">
+            <button onclick="niveis()" class="btn-nivel">NÍVEIS</button>
+        </div>
+    </div>
+
+    <dialog id="dialogSucesso">
+        <div class="headerDia">
+            <h2>Parabéns! Nível concluido</h2>
+            <button id="fecharDialogoSucesso"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <p>Parabéns, herói! Você dominou a arte da busca seletiva. Ao usar o comando SQL 'SELECT', você trouxe à luz todos os filmes de aventura da estante. Assim como os heróis da tela grande, você agora pode localizar informações específicas em um piscar de olhos. Continue aprimorando suas habilidades e prepare-se para a próxima aventura!</p>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Gênero</th>
+                <th>Ano</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Homem de Ferro</td>
+                <td>Aventura</td>
+                <td>2008</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pantera Negra</td>
+                <td>Aventura</td>
+                <td>2018</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Mulher-Maravilha</td>
+                <td>Aventura</td>
+                <td>2017</td>
+            </tr>
+            <!-- Adicione mais linhas para representar outros filmes -->
+        </table>
+        
+        <div class="footerDia">
+            <button onclick="niveis()" class="btn-nivel">NÍVEIS</button>
+            <button onclick="proximaF3()" class="btn-nivel">PRÓXIMA FASE</button>
+        </div>
+    </dialog>
+
+    <dialog id="dialogFalha">
+        <div class="headerDia">
+            <h2>Não foi dessa vez!</h2>
+            <button id="fecharDialogoFalha"><i class="fa-solid fa-x"></i></button>
+        </div>
+        <p>Infelizmente, a busca não trouxe o tesouro que você procurava. Assim como no mundo do SQL, onde a sintaxe precisa ser precisa, aqui também é fundamental acertar o comando. Reveja sua consulta e lembre-se de que cada detalhe importa.</p>
+        <div class="footerDia">
+            <button onclick="recomecar()" class="btn-nivel">TENTAR NOVAMENTE</button>
+        </div>
+    </dialog>
+
+    <script src="../js/script_fase2.js"></script>
 </body>
 </html>
