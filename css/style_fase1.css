@@ -223,11 +223,6 @@ table th, td {
         overflow: auto;
     }
 
-    .texto {
-        height: auto;
-        padding: 10px 0;
-    }
-
     .jogo {
         height: 20%;
         display: flex;
